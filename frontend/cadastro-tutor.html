@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Tutores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Tutores</h1>
+    <p><button onclick="window.location.href='index.html'">← Voltar</button></p>
+  </header>
+
+  <main>
+    <form id="form-tutor">
+      <input type="hidden" id="tutor-id" name="id">
+      <input type="text" name="nome" placeholder="Nome Completo" required>
+      <input type="tel" name="telefone" placeholder="Telefone" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <button type="submit" id="btn-submit">Cadastrar</button>
+    </form>
+
+    <h2>Tutores Cadastrados</h2>
+    <ul id="lista-tutores"></ul>
+  </main>
+
+  <script src="apiService.js"></script>
+  <script src="cadastro-tutor.js"></script>
+</body>
+</html>

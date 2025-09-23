@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atendimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Atendimento</h1>
+    <button onclick="window.location.href='index.html'">← Voltar</button>
+  </header>
+
+  <main>
+    <!-- Formulário de Cadastro -->
+    <section>
+      <h2>Cadastrar Atendimento</h2>
+      <form id="form-atendimento">
+        <label for="animal">Animal:</label>
+<input list="animais" id="animal" name="animal" required>
+<datalist id="animais"></datalist>
+
+
+        <label for="servico">Serviço:</label>
+        <input type="text" id="servico" name="servico" required>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Lista de Atendimentos -->
+    <section>
+      <h2>Atendimentos Registrados</h2>
+      <table id="tabela-atendimentos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Animal</th>
+            <th>Tutor</th>
+            <th>Serviço</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Preenchido pelo JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="apiService.js"></script>
+  <script src="atendimento.js"></script>
+</body>
+</html>
